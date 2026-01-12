@@ -280,9 +280,7 @@ void main() {
 
 	ofstream asigurariOut("asigurariOut.txt", ios::out);
 	if (asigurariOut.is_open()) {
-		asigurariOut << a1;//nu merge inlantuirea la << ofstream
-		asigurariOut << a2;//nu merge inlantuirea la << ofstream
-		asigurariOut << a3;//nu merge inlantuirea la << ofstream
+		asigurariOut << a1 << a2 << a3 << endl;
 
 		asigurariOut.close();
 	}
@@ -290,7 +288,7 @@ void main() {
 		cout << "Fisierul asigurariOut.txt nu poate fi deschis pentru scriere.\n";
 	}
 
-	cout << endl << endl << "FISIERE" << endl << endl;
+	cout << endl << endl << "FISIERE TEXT" << endl << endl;
 
 	ifstream asigurariIn("asigurariOut.txt", ios::in);
 	if (asigurariIn.is_open()) {
@@ -311,7 +309,7 @@ void main() {
 		cout << "Fisierul asigurariOut.txt nu poate fi deschis pentru citire.\n";
 	}
 
-	cout << "\n\n\n=========BINARE=========\n\n\n";
+	cout << "\n\n\n=========FISIERE BINARE=========\n\n\n";
 	ofstream fisBinarOut("wwww.bin", ios::out | ios::binary);
 	if (fisBinarOut.is_open()) {
 		a2.scrieInFisierBinar(fisBinarOut);
